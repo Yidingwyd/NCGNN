@@ -25,10 +25,14 @@ The input of the SSNGNN should be saved as a python dictionary (named as `datase
 \-  valule - `sample dictionary`.
 * `sample dictionary`:  
 \- keys `a`, `b`, `c`, `alpha`, `beta`, and `gamma` - the lattice parameters that describe the unit cell;  
-\- key `comp` - `site dictionary`;
+\- key `comp` - `site dictionary`;  
 \- key `target` - target (property) of the sample.  
 * `site dictionary`:  
 \- key - the relative positions of lattice sites, enclosed in square brackets [];  
 \- value - the chemical compositions at those sites, which should be readable by pymatgen.  
-
+A sample representing a BCC solid solution is shown below:  
+![An example for a BCC sample](https://github.com/Yidingwyd/SSNGNN/blob/main/Kfold/cpa/fig1.png)  
+If the solid solution exhibits a sublattice structure, where the composition varies across different lattice sites, the values in the `site dictionary` can also differ accordingly. A sample representing a perovskite solid solution is shown below:
+![An example for a perovskite sample](https://github.com/Yidingwyd/SSNGNN/blob/main/Kfold/perovskite_band_gap/fig2.png)
+ 
 
