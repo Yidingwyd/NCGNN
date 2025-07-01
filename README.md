@@ -1,4 +1,4 @@
-# SSNGNN
+![fig1](https://github.com/user-attachments/assets/15c9014e-6fe7-4ff7-b249-066789e082bc)# SSNGNN
 Solid Solution Nested Graph Neural Network (without edge features in the compositional graph)
 
 **Note:** This package is the version without edge features in the compositional graph.  
