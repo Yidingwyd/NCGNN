@@ -68,7 +68,7 @@ The input parameters of the model are summarized in the following table：
 ## Predict using a trained SSNGNN model
 You can predict by:  
 ```
-python predict.py --task regression  --test_data test_set_path --embedding atomic_embedding_path --modelpath model_path --savepath predictioin_results_save_path_in_xlsx  
+python predict.py --task regression  --test_data test_set_path --embedding atomic_embedding_path --modelpath model_path --savepath predictioin_results_save_path_and_name_ended_by_xlsx  
 ```
 It should be noted that if any of the hyperparameters listed in the above table are modified during training, the same settings must be used during prediction. Meanwhile, the atomic embeddings must remain consistent with that used during training.  
 ## Data  
