@@ -6,7 +6,7 @@ Solid Solution Nested Graph Neural Network (without edge features in the composi
 
 # Brief review
 SSNGNN provides a unified end-to-end representation learning framework for solid solution materials.   
-In simple terms, SSNGNN consists of two layers of graph representations: an inner compositional graph and an outer structural graph.  
+In simple terms, SSNGNN consists of two layers of a nested graph representation: an inner compositional graph and an outer structural graph.  
    * The inner compositional graph captures the compositional information of the solid solution by representing different elements at each lattice site.  
    * The outer structural graph models the overall crystal structure, aggregating features from the compositional graphs based on the spatial arrangement of lattice sites.  
 
