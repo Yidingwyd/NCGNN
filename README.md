@@ -5,16 +5,16 @@ Solid Solution Nested Graph Neural Network (without edge features in the composi
           For the version with edge features in the compositional graph, e.g., study of the chemical short-range order (SRO) in solid solutions, please refer to the second version [SSNGNN_v2](https://github.com/Yidingwyd/SSNGNN_v2).  
 
 # Contents  
-* [Brief review]()  
-* [How to cite]()  
-* [Prerequisites]()  
-* [Usage]()
-  * [Input of the SSNGNN]()
-  * [Train a SSNGNN model]()
-  * [Predict using a trained SSNGNN model]()
-  * [Data]()
-* [Acknowledgement]()
-* [Disclaimer]()
+* [Brief review](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#brief-review)  
+* [How to cite](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#how-to-cite)  
+* [Prerequisites](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#prerequisites)  
+* [Usage](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#usage)
+  * [Input of the SSNGNN](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#input-of-the-ssngnn)
+  * [Train a SSNGNN model](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#train-a-ssngnn-model)
+  * [Predict using a trained SSNGNN model](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#predict-using-a-trained-ssngnn-model)
+  * [Data](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#data)
+* [Acknowledgement](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#acknowledgement)
+* [Disclaimer](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#disclaimer)
 
 # Brief review
 SSNGNN provides a unified end-to-end representation learning framework for solid solution materials.   
