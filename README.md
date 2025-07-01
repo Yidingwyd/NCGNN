@@ -9,6 +9,11 @@ SSNGNN provides a unified end-to-end representation learning framework for solid
 In simple terms, SSNGNN consists of two layers of graph representations: an inner compositional graph and an outer structural graph.  
    * The inner compositional graph captures the compositional information of the solid solution by representing different elements at each lattice site.  
    * The outer structural graph models the overall crystal structure, aggregating features from the compositional graphs based on the spatial arrangement of lattice sites.  
-   
+
+# How to cite
+Our paper is in submission now.
+
+# Prerequisites
+This Python package requires: pytorch, torch_scatter, scikit-learn, pymatgen, pandas, numpy, json.
 
 
