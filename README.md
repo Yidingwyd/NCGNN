@@ -4,6 +4,18 @@ Solid Solution Nested Graph Neural Network (without edge features in the composi
 **Note:** This package is the version without edge features in the compositional graph.  
           For the version with edge features in the compositional graph, e.g., study of the chemical short-range order (SRO) in solid solutions, please refer to the second version [SSNGNN_v2](https://github.com/Yidingwyd/SSNGNN_v2).  
 
+# Contents  
+* [Brief review]()  
+* [How to cite]()  
+* [Prerequisites]()  
+* [Usage]()
+  * [Input of the SSNGNN]()
+  * [Train a SSNGNN model]()
+  * [Predict using a trained SSNGNN model]()
+  * [Data]()
+* [Acknowledgement]()
+* [Disclaimer]()
+
 # Brief review
 SSNGNN provides a unified end-to-end representation learning framework for solid solution materials.   
 In simple terms, SSNGNN consists of two layers in a nested graph representation: an inner compositional graph and an outer structural graph.  
@@ -63,7 +75,7 @@ It should be noted that if any of the hyperparameters listed in the above table 
 To facilitate reproducibility of our work, all datasets used in our paper have been converted into `.json` files in [Kfold](https://github.com/Yidingwyd/SSNGNN/tree/main/Kfold). Please cite the relevant papers as requested by the dataset authors.  
 # Acknowledgement  
 Codes of the SSNGNN are developed based on [CGCNN](https://github.com/txie-93/cgcnn) and [Roost](https://github.com/CompRhys/roost). We strongly recommend to cite their works.  
-#  Disclaimer  
+# Disclaimer  
 This is research code shared without support or any guarantee on its quality. However, please do raise an issue or submit a pull request if you spot something wrong or that could be improved and I will try my best to solve it.  
 My e-mail address: yidingwyd@163.com  
 
