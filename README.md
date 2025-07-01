@@ -17,9 +17,13 @@ Our paper is in submission now.
 This Python package requires: pytorch, torch_scatter, scikit-learn, pymatgen, pandas, numpy, json.
 
 # Usage
-## Define a customized dataset
+## Input of the SSNGNN  
+Two `.json` files are required to be input into the SSNGNN:  
+* Input dataset.  
+* Atomic embeddings.
+
 As an example, one can refer to the [ICSD - CPA dataset](https://github.com/Yidingwyd/SSNGNN/blob/main/Kfold/cpa/cpa_formation_energy_per_atom.json), of which structures are from [ICSD](https://icsd.products.fiz-karlsruhe.de/) with formation energies calculated by Coherent Potential Approximation (CPA).  
-The input of the SSNGNN should be saved as a python dictionary (named as `dataset dictionary`) in a `.json` file. 
+The **input dataset** of the SSNGNN should be saved as a python dictionary (named as `dataset dictionary`) in a `.json` file. 
 * `dataset dictionary`:  
 \- key - ID of each sample;  
 \-  valule - `sample dictionary`.
@@ -35,7 +39,31 @@ A sample representing a BCC solid solution is shown below:
 ![An example for a BCC sample](https://github.com/Yidingwyd/SSNGNN/blob/main/Kfold/cpa/fig1.png)  
 If the solid solution exhibits a sublattice structure, where the composition varies across different lattice sites, the values in the `site dictionary` can also differ accordingly. A sample representing a perovskite solid solution is shown below:  
 ![An example for a perovskite sample](https://github.com/Yidingwyd/SSNGNN/blob/main/Kfold/perovskite_band_gap/fig2.png)  
-qqqq
+  
+If you have solid solution cifs and a dataset csv like that in [cif_to_data](https://github.com/Yidingwyd/SSNGNN/tree/main/data/cif_to_data), [cif_to_data.py](https://github.com/Yidingwyd/SSNGNN/blob/main/data/cif_to_data/cif_to_data.py) may help you to generate a input dataset file.  
+  
+Another input file is the **atomic embeddings**, i.e., features in the nodes of the compositional graphs. We used [one-hot features](https://github.com/Yidingwyd/SSNGNN/blob/main/data/perov_onehot_embedding.json) and [SSPM features](https://github.com/Yidingwyd/SSNGNN/blob/main/data/SSPM.json) [(Y.Wang, et al. 2024)](https://github.com/Yidingwyd/SSPM) in perovskite and other datasets, respectively. Users may try other atomic embeddings, which are also saved as a python dictionary in a `.json` file.  
 
- 
+Based on the input files, the program will automatically generate PyTorch tensors in a style of nested graph representation.  
+## Train a SSNGNN model  
+You can train a SSNGNN model by:  
+```
+python main_new.py --task regression --train_data train_set_path --val_data val_set_path --embedding atomic_embedding_path --savepath model_save_path  
+```
+The model will be saved after every epoch, and the best model which shows the best performance on the validation set will be saved as `best.pth.tar` in the `model_save_path`.  
+The input parameters of the model are summarized in the following table：  
+![Table 1](https://github.com/Yidingwyd/SSNGNN/blob/main/table1.png)  
+## Predict using a trained SSNGNN model
+You can predict by:  
+```
+python predict.py --task regression  --test_data test_set_path --embedding atomic_embedding_path --modelpath model_path --savepath predictioin_results_save_path  
+```
+It should be noted that if any of the hyperparameters listed in the above table are modified during training, the same settings must be used during prediction. Meanwhile, the atomic embeddings must remain consistent with that used during training.  
+## Data  
+To facilitate reproducibility of our work, all datasets used in our paper have been converted into `.json` files in [Kfold](https://github.com/Yidingwyd/SSNGNN/tree/main/Kfold). Please cite the relevant papers as requested by the dataset authors.  
+# Acknowledgement  
+Codes of the SSNGNN are developed based on [CGCNN](https://github.com/txie-93/cgcnn) and [Roost](https://github.com/CompRhys/roost). We strongly recommend to cite their works.  
+#  Disclaimer  
+This is research code shared without support or any guarantee on its quality. However, please do raise an issue or submit a pull request if you spot something wrong or that could be improved and I will try my best to solve it.  
+My e-mail address: yidingwyd@163.com  
 
