@@ -71,11 +71,13 @@ You can predict by:
 python predict.py --task regression  --test_data test_set_path --embedding atomic_embedding_path --modelpath model_path --savepath predictioin_results_save_path_and_name_ended_by_xlsx  
 ```
 It should be noted that if any of the hyperparameters listed in the above table are modified during training, the same settings must be used during prediction. Meanwhile, the atomic embeddings must remain consistent with that used during training.  
+  
+The order of samples in the generated `.xlsx` file is consistent with that in the test set. The "formula" column is provided for reference only and does not represent the actual chemical formula.  
 ## Data  
 To facilitate reproducibility of our work, all datasets used in our paper have been converted into `.json` files in [Kfold](https://github.com/Yidingwyd/SSNGNN/tree/main/Kfold). Please cite the relevant papers as requested by the dataset authors.  
 # Acknowledgement  
 Codes of the SSNGNN are developed based on [CGCNN](https://github.com/txie-93/cgcnn) and [Roost](https://github.com/CompRhys/roost). We strongly recommend to cite their works.  
 # Disclaimer  
 This is research code shared without support or any guarantee on its quality. However, please do raise an issue or submit a pull request if you spot something wrong or that could be improved and I will try my best to solve it.  
-My e-mail address: yidingwyd@163.com  
+E-mail address: yidingwyd@163.com  
 
