@@ -16,4 +16,11 @@ Our paper is in submission now.
 # Prerequisites
 This Python package requires: pytorch, torch_scatter, scikit-learn, pymatgen, pandas, numpy, json.
 
+# Usage
+## Define a customized dataset
+As an example, one can refer to the [ICSD - CPA dataset](https://github.com/Yidingwyd/SSNGNN/blob/main/Kfold/cpa/cpa_formation_energy_per_atom.json), of which structures are from [ICSD](https://icsd.products.fiz-karlsruhe.de/) with formation energies calculated by Coherent Potential Approximation (CPA).  
+The input of the SSNGNN should be saved as a python dictionary (named as dataset dictionary) in a '.json' file.  
+As shown in the figure below, each sample is represented as an element in a dictionary, where the key is the ID of the sample.  
+The value in the dataset dictionary is itself a dictionary (named as sample dictionary), where the keys 'a', 'b', 'c', 'alpha', 'beta', and 'gamma' correspond to the lattice parameters that describe the unit cell.  
+In this sample dictionary, the key 'comp' corresponds to another dictionary (named as site dictionary) in which the keys are the relative positions of lattice sites, enclosed in square brackets [], and the corresponding values represent the chemical compositions at those sites, which should be readable by pymatgen.  
 
