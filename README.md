@@ -54,7 +54,7 @@ If the solid solution exhibits a sublattice structure, where the composition var
   
 If you have solid solution cifs and a dataset csv like that in [cif_to_data](https://github.com/Yidingwyd/SSNGNN/tree/main/data/cif_to_data), [cif_to_data.py](https://github.com/Yidingwyd/SSNGNN/blob/main/data/cif_to_data/cif_to_data.py) may help you to generate a input dataset file.  
   
-Another input file is the **atomic embeddings**, i.e., features in the nodes of the compositional graphs. We used [one-hot features](https://github.com/Yidingwyd/SSNGNN/blob/main/data/perov_onehot_embedding.json) and [SSPM features](https://github.com/Yidingwyd/SSNGNN/blob/main/data/SSPM.json) [(Y.Wang, et al. 2024)](https://github.com/Yidingwyd/SSPM) in perovskite and other datasets, respectively. Users may try other atomic embeddings, which are also saved as a python dictionary in a `.json` file.  
+Another input file is the **atomic embeddings**, i.e., features in the nodes of the compositional graphs. We used [one-hot features](https://github.com/Yidingwyd/SSNGNN/blob/main/data/perov_onehot_embedding.json) and [SSPM features](https://github.com/Yidingwyd/SSNGNN/blob/main/data/SSPM.json) [(Y.Wang, et al. 2024)](https://github.com/Yidingwyd/SSPM) in perovskite and other datasets, respectively. Users may try other atomic embeddings, which should also be saved as a python dictionary in a `.json` file.  
 
 Based on the input files, the program will automatically generate PyTorch tensors in a style of nested graph representation.  
 ## Train a SSNGNN model  
