@@ -3,6 +3,7 @@ Solid Solution Nested Graph Neural Network (without edge features in the composi
 
 **Note:** This package is the version without edge features in the compositional graph.  
           For the version with edge features in the compositional graph, e.g., study of the chemical short-range order (SRO) in solid solutions, please refer to the second version [SSNGNN_v2](https://github.com/Yidingwyd/SSNGNN_v2).  
+          Contact with me if there is any question about SSNGNN: yidingwyd@163.com  
 
 # Contents  
 * [Brief review](https://github.com/Yidingwyd/SSNGNN?tab=readme-ov-file#brief-review)  
