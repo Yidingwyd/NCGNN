@@ -24,6 +24,10 @@ def parse_list(input_str):
     return list(map(float, input_str.strip('[]').split(',')))
 
 parser = argparse.ArgumentParser(description='Solid Solution Nested Graph Neural Networks')
+# parser.add_argument('data_options', metavar='OPTIONS', nargs='+',
+#                     help='dataset options, started with the path to root dir, '
+#                          'then other options')
+
 
 parser.add_argument('--test_data')
 parser.add_argument('--embedding')
@@ -57,6 +61,7 @@ parser.add_argument('--h-fea-len', default=128, type=int, metavar='N',
                     help='number of hidden features after pooling')
 parser.add_argument('--n-h', default=1, type=int, metavar='N',
                     help='number of hidden layers after pooling')
+parser.add_argument('--step', default=0.05, type=float)
 
 
 args = parser.parse_args(sys.argv[1:])
@@ -64,13 +69,14 @@ args.cuda = not args.disable_cuda and torch.cuda.is_available()
 
 def main():
     global args, best_mae_error
-    dataset = SSDataset(args.test_data, args.embedding)
+    dataset = SSDataset(args.test_data, args.embedding, step=args.step)
     
     test_loader = DataLoader(dataset, batch_size = args.batch_size,
                               collate_fn = collate_batch, shuffle = False)
     
     comp_fea_len = dataset[0][1].shape[-1]
     bond_fea_len = dataset[0][4].shape[-1]
+
     model = SSNGNN(comp_fea_len = comp_fea_len,
                     elem_fea_len = args.elem_fea_len,#comp_fea经过embedding的长度
                     n_comp_mp_layers = args.n_comp_mp_layers,#comp graph消息传递层数
@@ -103,7 +109,7 @@ def main():
 
     else:
         print("=> no model found at '{}'".format(args.modelpath))
-        
+
     formula_list, output_list, target_list = [],[],[]
     model.eval()
     for i, batch_data in enumerate(test_loader):
