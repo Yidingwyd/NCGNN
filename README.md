@@ -23,14 +23,14 @@ In simple terms, NCGNN consists of two layers in a nested graph representation: 
    * The outer structural graph models the overall crystal structure, aggregating features from the compositional graphs based on the spatial arrangement of lattice sites.  
 
 # How to cite
-[Nested crystal graph neural networks for modeling chemically complex materials](https://www.sciencedirect.com/science/article/abs/pii/S1359645425010122)
-Yiding Wang, Fengpei Zhang, Tianqing Li, Xiangdong Ding, Graeme J. Ackland, Hongxiang Zong, Turab Lookman, Jun Sun,
-Nested crystal graph neural networks for modeling chemically complex materials,
-Acta Materialia,
+[Nested crystal graph neural networks for modeling chemically complex materials](https://www.sciencedirect.com/science/article/abs/pii/S1359645425010122)  
+Yiding Wang, Fengpei Zhang, Tianqing Li, Xiangdong Ding, Graeme J. Ackland, Hongxiang Zong, Turab Lookman, Jun Sun,  
+Nested crystal graph neural networks for modeling chemically complex materials,  
+Acta Materialia,  
 Volume 303,
 2026,
 121725,
-ISSN 1359-6454,
+ISSN 1359-6454,  
 https://doi.org/10.1016/j.actamat.2025.121725.
 
 # Prerequisites
