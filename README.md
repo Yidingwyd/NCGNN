@@ -83,5 +83,5 @@ The order of samples in the generated `.xlsx` file is consistent with that in th
 ## Data  
 To facilitate reproducibility of our work, all datasets used in our paper have been converted into `.json` files in [Kfold](https://github.com/Yidingwyd/NCGNN/tree/main/Kfold). Please cite the relevant papers as requested by the dataset authors.  
 # Acknowledgement  
-Codes of the NCGNN are developed based on [CGCNN](https://github.com/txie-93/cgcnn) and [Roost](https://github.com/CompRhys/roost). We strongly recommend to cite their works.  
+Codes of the NCGNN are developed based on [CGCNN](https://github.com/txie-93/cgcnn) and [Roost](https://github.com/CompRhys/roost), which are licensed under the MIT License. We recommend to cite their works.  
 
